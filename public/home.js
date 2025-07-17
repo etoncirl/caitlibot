@@ -94,8 +94,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const copyToggleCheckbox = document.getElementById("copyToggleCheckbox");
     const copyToggleChecked = localStorage.getItem('copyToggleCheckbox');
 
-    alert(copyToggleChecked);
-
     copyToggleCheckbox.checked = copyToggleChecked === "true";
     copyToggleCheckbox.addEventListener("change", () => {        
         localStorage.setItem('copyToggleCheckbox', copyToggleCheckbox.checked ? "true" : "false");
