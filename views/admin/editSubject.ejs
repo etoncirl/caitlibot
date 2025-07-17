@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% const isEdit = subject && subject.SubjectId; %>
+    <title><%= isEdit ? 'Edit Subject' : 'Create New Subject' %></title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <div class="form-container">
+        <h1><%= isEdit ? 'Edit Subject' : 'Create New Subject' %></h1>
+        <form action="<%= isEdit ? '/admin/subjects/' + subject.SubjectId + '?_method=PUT' : '/admin/subjects' %>" method="POST">
+            
+            <div class="name-container ">
+                <select name="category" class="styled-input" required>
+                    <option value="">Select Category</option>
+                    <% ['Sciences and Mathematics', 'Languages', 'Humanities', 'Arts and Creative Studies', 'Social Sciences'].forEach(cat => { %>
+                        <option value="<%= cat %>" <%= isEdit && subject.Category === cat ? 'selected' : '' %>><%= cat %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div class="name-container ">
+                <select name="level" class="styled-input" required>
+                    <option value="">Select Level</option>
+                    <% ['GCSE', 'A level'].forEach(lvl => { %>
+                        <option value="<%= lvl %>" <%= isEdit && subject.Level === lvl ? 'selected' : '' %>><%= lvl %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div class="name-container ">            
+                <input type="text" name="subject" placeholder="Subject" required autocomplete="off" value="<%= isEdit ? subject.Subject : '' %>">
+            </div>
+
+            <div class="name-container ">            
+                <input type="text" name="examBoard" placeholder="Exam Board and Course Code" required autocomplete="off" value="<%= isEdit ? subject.ExamBoard : '' %>">
+            </div>
+
+            <div class="button-group">
+                <a href="/admin" class="btn btn-neutral btn-mini">
+                    <span class="material-symbols-outlined">cancel</span>
+                </a>
+                <% if (!isEdit) { %>
+                <button type="button" id="bulkAddBtn" class="btn btn-subtle btn-mini">
+                    <span class="material-symbols-outlined">playlist_add</span>
+                </button>
+                <% } %>
+                <button type="submit" class="btn btn-primary btn-mini">
+                    <span class="material-symbols-outlined">check_circle</span>
+                </button>
+            </div>
+        </form>
+        <div id="subjectFeedback" style="margin-top:10px;"></div>
+    </div>
+    <% if (!isEdit) { %>
+    <script src="/editSubject.js"></script>
+    <% } %>
+</body>
+</html>

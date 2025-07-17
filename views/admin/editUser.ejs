@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% const isEdit = user && user.Email; %>
+    <title><%= isEdit ? 'Edit User' : 'Create New User' %></title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <div class="form-container">
+        <h1><%= isEdit ? 'Edit User' : 'Create New User' %></h1>
+        <form action="<%= isEdit ? '/admin/users/' + user.Email + '?_method=PUT' : '/admin/users' %>" method="POST">
+            <div class="email-admin-container">
+                <input type="email" name="email" placeholder="Email" autocomplete="off" required
+                       value="<%= isEdit ? user.Email : '' %>" <%= isEdit ? 'readonly' : '' %>>
+                <div class="toggle-container">
+                    <label class="toggle-label">
+                        <input type="checkbox" name="isAdmin" <%= isEdit && user.Admin ? 'checked' : '' %>>
+                        <span class="toggle-switch"></span>
+                        Admin
+                    </label>
+                </div>
+            </div>
+            <% if (!isEdit) { %>
+            <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+            <% } %>
+            <div class="name-container">
+                <input type="text" name="firstName" placeholder="First Name" autocomplete="off" required
+                       value="<%= isEdit ? user.FirstName : '' %>">
+                <input type="text" name="lastName" placeholder="Last Name" autocomplete="off" required
+                       value="<%= isEdit ? user.LastName : '' %>">
+            </div>
+            <div class="button-group">
+                <a href="/admin" class="btn btn-neutral btn-mini">
+                    <span class="material-symbols-outlined">cancel</span>
+                </a>
+                <% if (!isEdit) { %>
+                <button type="button" id="bulkAddBtn" class="btn btn-subtle btn-mini">
+                    <span class="material-symbols-outlined">playlist_add</span>
+                </button>
+                <% } %>
+                <button type="submit" class="btn btn-primary btn-mini">
+                    <span class="material-symbols-outlined">check_circle</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <% if (!isEdit) { %>
+    <script src="/editUser.js"></script>
+    <% } %>
+</body>
+</html>

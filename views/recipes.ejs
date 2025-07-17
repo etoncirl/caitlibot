@@ -1,0 +1,141 @@
+<% const MAX_PROMPTS_ON_DISPLAY = 10; %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />        
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1 style="text-align: left;">Your Recipe Book</h1>
+        <div class="float-right">    
+            <div class="copy-toggle-switch" id="copy-toggle" style="padding-right: 40px;">
+                <input type="checkbox" id="copyToggleCheckbox" />
+                <label class="copy-toggle-switch-label" for="copyToggleCheckbox">
+                    <div class="copy-toggle-switch-inner">
+                        <span>Copy plain text</span>
+                        <span>Copy ChatGPT link</span>
+                    </div>
+                    <div class="copy-toggle-switch-switch"></div>
+                </label>
+            </div>
+            <span class="btn btn-subtle btn-mini" id="show-help" style="display: none;">
+                <span class="material-symbols-outlined">question_mark</span>
+            </span>        
+            <a href="/"  class="btn btn-neutral btn-mini">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+        </div>
+
+        <div id="help-container" style="display: none;">  
+            <div class="help-banner">
+                <div class="help-text" id="help-text"></div>
+                <div class="help-button-container "> 
+                    <span class="btn btn-subtle btn-mini" id="hide-help">
+                        <span class="material-symbols-outlined">done</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+        <table class="recipe-table">
+            <thead>
+                <tr>
+                    <th class="thin-column">Topic</th>                    
+                    <th colspan="2" class="wide-column">Recipe & Comments</th>
+                    <th colspan="2" class="thin-column">Info & Actions</th>                     
+                </tr>   
+            </thead>
+            <tbody>                
+                <% recipes.forEach(function(r) { 
+                    const savedDateObj = new Date(r.SavedDate);
+                    const formattedDate = savedDateObj.toLocaleString('en-GB', { 
+                      day: '2-digit', 
+                      month: '2-digit', 
+                      year: 'numeric', 
+                      hour: '2-digit', 
+                      minute: '2-digit', 
+                      hour12: false 
+                    });
+                %>
+                    <tr>                                                                      
+                        <td class="thin-column" style="font-size: small">
+                            <div style="font-weight: bold; padding-bottom: 8px;"><%= r.Level %><br/><%= r.Subject %></div>
+                            <div id="topic-<%= r.RecipeId %>"><%= r.Topic %></div>
+                        </td>
+                        <td class="no-right-border">
+                            <div id="prompt-<%= r.RecipeId %>"><%= r.Prompt %></div>                            
+                            <div id="comments-<%= r.RecipeId %>" class="comments-div"></div>
+                        </td>       
+                        <td class="thin-column no-left-border">                        
+                            <button id="copy-button-<%= r.RecipeId %>" class="btn btn-primary btn-mini copy-button">
+                                <span class="material-symbols-outlined">content_copy</span>
+                            </button>
+                            <button id="comment-button-<%= r.RecipeId %>" class="btn btn-subtle btn-mini comment-button"><span class="material-symbols-outlined">comment</span></button>                           
+                        </td>                   
+                        <% if (r.SharedDate == null) { %>
+                            <td class="thin-column no-right-border" >
+                                <div style="font-size: small; padding-bottom: 15px;"><strong>Saved:</strong><br/><%= formattedDate %></div>
+                                <span id="share-badge-<%= r.RecipeId %>" class="badge badge-no">Not Shared</span>                            
+                                <div style="font-size: small; padding-top: 15px;"><strong>Recipe Code:</strong><br/><span style="font-family: 'Courier New', Courier, monospace; color: purple;"><%= r.Code %></span></div>
+                            </td>
+                            <td class="thin-column no-left-border">                        
+                                <button id="share-button-<%= r.RecipeId %>" class="btn btn-primary btn-mini share-button">
+                                    <span class="material-symbols-outlined">share</span>
+                                </button>
+                                <button id="unshare-button-<%= r.RecipeId %>" class="btn btn-danger btn-mini unshare-button" style="display: none;">
+                                    <span class="material-symbols-outlined">share_off</span>
+                                </button>
+                        <% } else { %>
+                            <td class="thin-column no-right-border" >
+                                <div style="font-size: small; padding-bottom: 15px;"><strong>Saved:</strong><br/><%= formattedDate %></div>
+                                <span id="share-badge-<%= r.RecipeId %>" class="badge badge-yes">Shared</span>                 
+                                <div style="font-size: small; padding-top: 15px;"><strong>Recipe Code:</strong><br/><span style="font-family: 'Courier New', Courier, monospace; color: purple;"><%= r.Code %></span></div>
+                            </td>
+                            <td class="thin-column no-left-border">                        
+                                <button id="share-button-<%= r.RecipeId %>" class="btn btn-primary btn-mini share-button" style="display: none;">
+                                    <span class="material-symbols-outlined">share</span>
+                                </button>
+                                <button id="unshare-button-<%= r.RecipeId %>" class="btn btn-danger btn-mini unshare-button">
+                                    <span class="material-symbols-outlined">share_off</span>
+                                </button>
+                        
+                        <% } %>                                             
+                        
+                            <button id="delete-button-<%= r.RecipeId %>" class="btn btn-danger btn-mini delete-button">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </td>                                               
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+    
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">        
+        <div id="modal-output"></div>
+        <div class="loader-container hidden" id="modal-loader">
+            <div class="loader"></div>
+        </div>
+        <div id="modal-input">
+            <input type="text" id="modal-prompt" autocomplete="off">
+        </div>        
+        <div class="button-group">
+            <span id="modal-close" class="btn btn-neutral btn-mini"><span class="material-symbols-outlined">close</span></span>
+            <button id="continue-button" class="btn btn-primary btn-mini"><span class="material-symbols-outlined">resume</span></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/comments.js"></script>
+    <script src="/toast.js"></script>
+    <script src="/recipes.js"></script>
+
+</body>
+</html> 

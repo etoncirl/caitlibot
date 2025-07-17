@@ -1,0 +1,39 @@
+{
+  "name": "caitlibot",
+  "version": "1.0.0",
+  "engines": {
+    "node": "22.x"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "better-sqlite3": "^11.7.0",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^8.0.2",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "method-override": "^3.0.0",
+    "multer": "^2.0.0",
+    "node-persist": "^4.0.4",
+    "openai": "^4.77.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "pdf-parse": "^1.1.1",
+    "redis": "^4.7.0",
+    "showdown": "^2.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

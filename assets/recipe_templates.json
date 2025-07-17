@@ -1,0 +1,322 @@
+[
+  {
+    "id": 0,
+    "heading": "Multiple choice questions",
+    "template": "I am a {{student}} student. I want to improve my understanding of the terminology and processes involved in {{topic}}. I would like you to ask me a series of multiple-choice questions about this topic. These questions should encourage deeper levels of understanding. Each question should have 5 possible answers, labelled with letters of the alphabet. Make the other options plausible, so that it's not too easy. Do not tell me what the right answer is, instead ask me each time. Tell me if I am correct, but if I am incorrect give me a second chance before revealing the answer. After each correct answer, give me another question."
+  },
+  {
+    "id": 1,
+    "heading": "Fill in the gaps",
+    "template": "I am a {{student}} student. I want to improve my recall of the terminology and processes involved in the {{topic}}. I would like you to generate me a 'fill in the gaps' activity with 10 gaps and at least 200 words. Number the gaps. At the end, give me a shuffled list of 15 words, 10 of which belong to the gaps, 5 are red herrings. After I guess a gap, congratulate me if I am correct and give me a clue if I am wrong. Don't tell me the right answer unless I get it wrong three times in a row."
+  },
+  {
+    "id": 2,
+    "heading": "A debate",
+    "template": "I am a {{student}} student who is trying to deepen their level of understanding of the concept of the {{topic}}. You are a teacher, and we are going to take part in a debate. Pick two sides who have different views. I want you to play the role of one side and I will play the role of the other. Tell me who both sides are going to be, then we will start a back-and-forth discussion on the two viewpoints. Do not tell me what to say, only my role. As you are the teacher, you know both sides. Therefore, after I have provided my view, you should correct me if I make a bad or inaccurate point. Be highly critical, but respectful. If I make a good point, give a carefully constructed counterview."
+  },
+  {
+    "id": 3,
+    "heading": "Name that thing",
+    "template": "I am a {{student}} student. I want to improve my recall of {{topic}}. Prompt me with a brief description of a specific example of this topic, and then ask me what it is known as. Wait for my response. If I correctly state what the example is, congratulate me and ask me a follow up question about it. Again, wait for my response. Then, if I get that follow up question right, start again with guessing another. If I am incorrect give me a second chance before revealing the answer and moving on to the next one."
+  },
+  {
+    "id": 4,
+    "heading": "Socratic questionning",
+    "template": "I am a {{student}} student and want to deepen my understanding of the {{topic}}. Use the Socratic method to test my understanding. Don't immediately tell me the right answer if I make a mistake, tell me where I've gone wrong and ask me to try again. Start off with questions that challenge me to think critically. After my response, challenge me to explore the topic more deeply based on my answer. The questions should focus on one thing at a time and remember not to tell me the answer unless I've got it right myself already. Ask one question at a time, wait for my response and then giving your feedback or asking for more detail."
+  },
+  {
+    "id": 5,
+    "heading": "Odd one out and why",
+    "template": "I am a {{student}} student. I want to play a game of 'odd one out' with you to help with my understanding of {{topic}}. Each time we play, give me a list of 5 items and ask me which is the odd one out. There should be a clear thread that links 4 of the 5 items but keep this secret. First, all I must do is state the odd one out. If I guess wrong, give me another chance. If I guess correctly, congratulate me and ask me what the thread was that linked them. If I then get the thread right, start again with another. If I get it wrong, tell me the thread and let me guess again."
+  },
+  {
+    "id": 6,
+    "heading": "Spot the correct explanation",
+    "template": "I am a {{student}} student. I want to improve my understanding of {{topic}}. I want you to provide me with a series of challenges, each one should consist of the name of one aspect of the topic, and then a list of 4 explanations. 3 of these explanations should be subtly wrong, only one should be correct. Prompt me to identify the right one. Don't tell me the right answer until I've worked it out myself. Repeat this process on other processes in this topic."
+  },
+  {
+    "id": 7,
+    "heading": "If this is the answer...",
+    "template": "I am a {{student}} student. I want to get better at describing {{topic}}. Please challenge me with a series of 'if this is the answer, what is the question' challenges. Each challenge should include 4 questions. Then you should state a single answer with which only one of the questions should be associated, the other 3 should be subtly wrong. Make these difficult, if the solution is obvious, they are not a challenge! Give me one challenge at a time, wait for me to tell you which of the four questions is the right one before giving feedback. If I get it wrong, give me a second chance before explaining the answer. When done, move straight on to another challenge."
+  },
+  {
+    "id": 8,
+    "heading": "Critically compare two options",
+    "template": "I am a {{student}} student. I would like you to critically assess my ability to evaluate between two definitions of a term as to which is best. The topic is {{topic}}. Present me with two statements, one should be correct, and one should be slightly wrong or misleading. The mistake should be subtle, not obvious. Prompt me to say which is the weaker option and why. If I get it right, congratulate me and move on to the next one. If I get it wrong, tell me which of the two is weaker but not why it is weaker - then, prompt me to have a go at saying why it is weaker. If I still don't get it, explain why, and move on to the next one."
+  },
+  {
+    "id": 9,
+    "heading": "Comprehension and questioning",
+    "template": "I am a {{student}} student. I wish to deepen my understanding of {{topic}}. First, provide me with a concise explanation of the major contributing factors. Then ask me a tricky comprehension question that involves combining knowledge from the provided explanation with my own knowledge to answer it. After I have responded, critically assess my response but do not tell me what I should have written, only which aspects of what I've written are good and which need work. After each assessment, ask me if I want to try that one again or be asked a new question. Repeat this process, with the same options after each of my question attempts."
+  },
+  {
+    "id": 10,
+    "heading": "Spot the mistakes",
+    "template": "I am a {{student}} student and I want to deepen my understanding of the topic of {{topic}}. I want you to generate a short essay of around 300 words outlining the major strands of this topic. However, I want you to make a few glaring but still plausible mistakes. Aim for 5 mistakes in the text. Then I want to play an activity with you where you prompt me to spot a mistake in the text. Don't tell me what the mistakes are. If I correctly identify a mistake then you can congratulate me, explain what the text should be corrected to and invite me to try another. If I don't identify one, give me another chance."
+  },
+  {
+    "id": 11,
+    "heading": "What am I? (The yes/no game)",
+    "template": "I am a {{student}} student. I want to play a game of 'What am I?' with you. The theme is {{topic}}. You should pick one of these but keep it a secret, then let me ask questions. Don't give the game away until I've guessed correctly. When I have guessed correctly, congratulate me and immediately pick another item for the next round which should start straight away."
+  },
+  {
+    "id": 12,
+    "heading": "True or false statements [Rapid]",
+    "template": "I am a {{student}} student. I want a quick set of non-trivial true-or-false statements on {{topic}}. Please give me a series of short statements, one at a time. I will state if I think each is true or false. If I'm correct, confirm and move on. If I'm incorrect, politely tell me that's the case and ask me what led me to think that way - use this to probe for misconceptions and steer follow up questions."
+  },
+  {
+    "id": 13,
+    "heading": "Pair associations [Rapid]",
+    "template": "I am a {{student}} student. I'd like a quick 'word association' activity on {{topic}}. Please give me a pair of key definitions or concepts from the topic, and ask me to suggest a single word I associate with them. If my association is off track, give me a gentle nudge. After I provide a sensible association, give me another pair."
+  },
+  {
+    "id": 14,
+    "heading": "3 facts, 2 links, 1 question [Rapid]",
+    "template": "I am a {{student}} student. I want a short '3-2-1' recap activity on {{topic}}. First, ask me to name three key ideas or facts I recall. Wait for my responses, then respond with an evaluation of the relevance and accuracy of my facts. Then, ask to me state two links to other topics. Respond in a similar fashion as you did for the 3 facts. Finally, as me to state one unanswered question I still have. Respond with a hint as to how I might find out the answer, or offer a rewording of the question if you believe it will further my understanding."
+  },
+  {
+    "id": 15,
+    "heading": "Match up the pairs [Rapid]",
+    "template": "I am a {{student}} student. I'd like to play a 'what goes together?' game on the topic of {{topic}}. Provide 5 pairs of related words or concepts, but shuffle them so they aren't matched. One set of words/concepts should be labelled '1'...'5', the other 'a'...'e'. Ask me to pair them correctly. If I pair any of them incorrectly, point it out, give me a hint (ensuring it doesn't make the answer trivial), and let me try again. After two mistakes, reveal the correct pairing with an explanation of why."
+  },
+  {
+    "id": 16,
+    "heading": "Definition race [Rapid]",
+    "template": "I am a {{student}} student. I want to do a 'definition race' on {{topic}}. Give me 5 short definitions, each missing one crucial word. Invite me to fill in the blanks with the right term. I get three 'lives', if I guess any of them wrong then deduct a life and reveal the correct term. If I am able to get all 5 blanks without losing my 3 lives, congratulate me. If not, give me some helpful advice and generate a new set of 5 definitions to try again."
+  },
+  {
+    "id": 17,
+    "heading": "Which is correct? [Rapid]",
+    "template": "I am a {{student}} student. I want a quick 'which is correct?' challenge on {{topic}}. Give me two short statements, one accurate and one slightly wrong or misleading. Ask me to choose which is correct. If I choose wrongly, let me try one more time before you reveal the answer. Then give me a new pair to assess."
+  },
+  {
+    "id": 18,
+    "heading": "Two true, one false [Rapid]",
+    "template": "I am a {{student}} student. I want a 'spot the odd fact' challenge about {{topic}}. Provide three statements, two of which are true and one is false. Ask me to pick which one is false. If I'm incorrect, encourage me to think again. After two wrong attempts, reveal the incorrect fact and give a brief explanation. Then move on to another set."
+  },
+  {
+    "id": 19,
+    "heading": "Mini-critique [Rapid]",
+    "template": "I am a {{student}} student. I'd like a quick 'mini-critique' activity on {{topic}}. Give me a short statement or argument and ask me to spot one flaw or offer one improvement. If I can't find any issues, give me a hint and prompt me to look again. After I respond, give me a new statement to critique."
+  },
+  {
+    "id": 20,
+    "heading": "Predict the outcome [Rapid]",
+    "template": "I am a {{student}} student. I'd like a short 'predict the outcome' challenge on {{topic}}. Describe a brief scenario and ask me what I think happens next. If I'm wrong, give me one clue, then let me guess again. After that, reveal the outcome and present another scenario."
+  },
+  {
+    "id": 21,
+    "heading": "Compare and contrast [Rapid]",
+    "template": "I am a {{student}} student. I'd like a short 'compare and contrast' activity on {{topic}}. Present me with two related ideas or phenomena. Ask me for one similarity and one difference, or alternatively one pro and one con. If I miss them, give me a hint, then a second chance. After that, provide a fresh pair."
+  },
+  {
+    "id": 22,
+    "heading": "Missing steps [STEM]",
+    "template": "I am a {{student}} student. I want to improve my ability to reason through problems step by step on the topic of {{topic}}. Provide me with a short procedural outline related to the topic, but omit key steps. Ask me to identify the spots where steps are missing. For each missing step I identify, prompt me to provide what I think that next step should be if I haven't already done so. If I give a correct response, confirm it and move on. If I'm wrong, give me a hint as to where I might have gone astray and give me another chance, but do not reveal the correct step unless I am stuck for two responses. Once I fill in all missing steps correctly, ask me a higher-level question about the whole topic. Wait for my response before offering feedback, and then move on to a new process."
+  },
+  {
+    "id": 23,
+    "heading": "Open-ended questionning [STEM]",
+    "template": "I am a {{student}} student. I want to explore {{topic}} through short, open-ended questions. Present me with a question that focuses on one of the core concepts or fundamental laws of the topic. Let me try to formulate my own answer. Then, based on my response, critically assess my reasoning, identifying any weaknesses without directly supplying the correct answer. Ask me to refine or correct my explanation. If, after two attempts, I'm still off track, show me where I went wrong and ask me to correct that specific misunderstanding. Repeat this cycle with a new question each time I come to a resolution."
+  },
+  {
+    "id": 24,
+    "heading": "Evaluate and rank [STEM]",
+    "template": "I am a {{student}} student. I want to enhance my evaluative skills in {{topic}}. Give me four statements that attempt to explain a concept or phenomenon in the topic, each statement either partially correct or incorrect in subtle ways, except for one which is the most accurate. Ask me to rank these statements from the least correct to the most correct and explain my reasoning. If I rank them incorrectly, give me a clue and then provide me with a second chance to reorder or refine my logic. Only after I cannot correct my ranking should you clarify which is best and why. Then, offer a new set of statements to rank."
+  },
+  {
+    "id": 25,
+    "heading": "Propose a hypothesis [STEM]",
+    "template": "I am a {{student}} student. I want to improve my ability to formulate hypotheses on the topic of {{topic}} based on observations. Present me with a short description of a realistic observation, and then ask me to propose a hypothesis that might explain it. Wait for my response. If my hypothesis is plausible, challenge me by asking how it could be verified. If my hypothesis seems off track, prompt me to reconsider without telling me the 'correct' hypothesis. Offer feedback on each attempt, and once I converge on a sound hypothesis, present me with a fresh data scenario."
+  },
+  {
+    "id": 26,
+    "heading": "Problem solving methodologies [STEM]",
+    "template": "I am a {{student}} student. I want to sharpen my problem-solving skills in {{topic}}. Give me a scenario where the topic applies. Ask me to propose a methodology to solve a problem. Wait for my proposal, then critique it. If parts of my plan are weak, like overlooked variables / factors, or I demonstrate any misconceptions, point this out and ask me how I might refine it. Don't give me a model answer until I've attempted two rounds of revision. Once the design is solid, move to another scenario requiring a different approach."
+  },
+  {
+    "id": 27,
+    "heading": "Procedural critical thinking [STEM]",
+    "template": "I am a {{student}} student. I want to improve my critical thinking for {{topic}}. Present a short argument, chain of logic, or calculation steps about some concept in the topic. Embed one or two subtle logical or procedural errors. Ask me to identify any flaws. If I spot the mistake, congratulate me, then ask me how to correct it. If I miss it, prompt me again to look more closely. Only after I fail twice should you highlight where the error is, and ask me to correct it. Once I successfully correct the mistake, provide a new flawed argument to analyse."
+  },
+  {
+    "id": 28,
+    "heading": "Creative workflows [Creative arts]",
+    "template": "I am a {{student}} student. I want to improve my approach to {{topic}}. Present me with a partially complete creative workflow used to produce a piece or performance following this theme. For each missing step, prompt me to say what I think should come next. If I give a correct response, confirm and move on. If my answer is off track, point out the weakness and let me try again without giving the final step away immediately. After all missing steps are filled in, ask me to reflect on how these steps might change if I were applying different techniques or exploring new creative directions. Then, repeat with a new workflow."
+  },
+  {
+    "id": 29,
+    "heading": "Deeper insight [Creative arts]",
+    "template": "I am a {{student}} student. I want to deepen my insight into {{topic}}. Prompt me with an open-ended question about a style or technique related to the topic. Let me respond in my own words: If I express a strong insight, challenge me to dig deeper - ask me how or why this insight is relevant, or how it might be critiqued. If I'm missing the mark, indicate where my reasoning is weak and let me refine my response. Only after I've made two attempts should you clarify the key points I might be overlooking. Continue this with new, progressively more challenging questions that focus on the deeper layers of interpretation or technique."
+  },
+  {
+    "id": 30,
+    "heading": "Evaluating interpretations [Creative arts]",
+    "template": "I am a {{student}} student. I want to practice evaluating different perspectives on the theme of {{topic}}. Give me four short interpretations or analyses of a piece, style, or creative technique within the theme. One of these interpretations should be the most compelling or accurate, while the other three have subtle flaws or over-generalisations. Ask me to rank these interpretations from weakest to strongest and explain my reasoning. If I rank them incorrectly, prompt me to identify where my logic might falter, without revealing the 'best' interpretation. Give me a second attempt. Only after I can't improve my ranking on my own should you reveal which one is strongest and why. Then move on to another set of interpretations for me to evaluate similarly."
+  },
+  {
+    "id": 31,
+    "heading": "Conveyed meaning [Creative arts]",
+    "template": "I am a {{student}} student. I'd like to develop and test my interpretive skills in {{topic}}. Present me with a concise description of a well-known piece or performance. Ask me to propose a central theme or 'hypothesis' about what the artist/author is trying to convey. If my hypothesis is plausible, challenge me by asking how I might refine or support it. If my hypothesis seems off base, encourage me to reconsider the visual/auditory elements or relevant artistic movements. Give me feedback without revealing the 'correct' interpretation outright. Once I develop a coherent interpretation, pose a new piece or perspective for analysis."
+  },
+  {
+    "id": 32,
+    "heading": "Creative proposals [Creative arts]",
+    "template": "I am a {{student}} student. I want to hone my creative skills in {{topic}}. Give me a scenario or theme - such as a contemporary social issue, a particular style or a blend of contrasting genres. Ask me to propose a creative project (composition, performance, etc.) that explores it. When I share my project idea, first highlight the most promising aspects, then critique it by asking how another selected aspect might be improved. Then let me revise my plan. After my revision, offer a proposal for a refinement of your own and invite my feedback. Then move on to a fresh scenario."
+  },
+  {
+    "id": 33,
+    "heading": "Critique an analysis [Creative arts]",
+    "template": "I am a {{student}} student. I want to strengthen my analytical and critical thinking skills for {{topic}}. Provide a short critique of a creative piece that contains one or two subtle misunderstandings, e.g. attributing the wrong era's influence, mislabelling a technique, or confusing the artist's intention. Ask me to identify the flaws in the critique. If I correctly identify them, congratulate me, but it not, encourage me to look again. Only if I miss twice do you point out the error. Then ask me how to correct it. Follow up by providing a new flawed critique for me to analyse."
+  },
+  {
+    "id": 34,
+    "heading": "Context and evidence [Humanties]",
+    "template": "I am a {{student}} student. I want to improve my understanding of {{topic}} - focusing on a specific historical event, text, literary work, or cultural artifact. Provide me with a short argument or interpretation related to this, but leave out several crucial steps or pieces of textual/historical evidence. For each missing piece, prompt me to supply what evidence or reasoning I think should go there. If I'm correct, confirm and move on. If I'm off track, tell me where I might reconsider without giving the final answer straight away. Once I fill in all gaps, challenge me to reflect on how this supports or changes my interpretation. Wait for my response before offering feedback, then present a new partial argument to fill in."
+  },
+  {
+    "id": 35,
+    "heading": "Open-ended interpretations [Humantities]",
+    "template": "I am a {{student}} student. I want to explore deeper meanings and contexts within {{topic}}. Pose a broad, open-ended question, inviting reflection on cultural, historical, or philosophical factors. Let me respond with my interpretation. If my interpretation is weak or missing key points, guide me to reevaluate by posing additional questions, e.g. \"what biases are influencing your interpretation?\" or \"how can cross-referencing sources support your view?\". Encourage me to refine my thoughts before revealing any major hints. After I give a solid response, move on to another open-ended question, each time aiming for deeper reflection."
+  },
+  {
+    "id": 36,
+    "heading": "Evaluating interpretations [Humantities]",
+    "template": "I am a {{student}} student. I want to practice comparing different readings or arguments about {{topic}}. Present four short interpretations or analyses of a text, event, or philosophical stance. Each interpretation should align with a different perspective or highlight a different theme. One is the most coherent/accurate, while the others contain subtle inaccuracies or biases. Ask me to rank them from weakest to strongest. Prompt me to explain my reasoning. If I struggle, ask me to reflect on textual evidence, historical context, or cultural perspectives without directly revealing which is correct. Only if I can't self-correct do you reveal the best interpretation and explain why. Then proceed to another set of interpretations."
+  },
+  {
+    "id": 37,
+    "heading": "Analysis and implications [Humantities]",
+    "template": "I am a {{student}} student. I want to refine my analytical skills in {{topic}}. Provide a short summary or description of a historical text, literary passage, or cultural document. Ask me to propose a key theme, argument, or thesis about what central themes, arguments, or questions the author is communicating. If my hypothesis is compelling, follow up with a question on the broader implications. If my hypothesis seems off, encourage me to look again at the details - like context, textual clues, or relevant history - without revealing the 'right' theme. Once I refine my claim, ask me how it ties into previous literature or events, before prompting a new excerpt to analyse."
+  },
+  {
+    "id": 38,
+    "heading": "Research strategies [Humantities]",
+    "template": "I am a {{student}} student. I want to expand my research and interpretive strategies in {{topic}}. Assign me a scenario, e.g. examining a historical event, comparing two literary works, or analysing a philosophical concept. Ask me to outline how I would conduct a critical inquiry or research project on it, including what other sources it would be valuable to compare against. Once I propose a method, critique if necessary, particularly if I overlook important elements or context and give me a chance to revise my approach. If my answer is still lacking after two attempts, offer a refined methodology. Then move on to another scenario."
+  },
+  {
+    "id": 39,
+    "heading": "Critial reading [Humantities]",
+    "template": "I am a {{student}} student. I want to sharpen my critical reading of {{topic}}. Present a short critique or interpretation of a historical event, literary text, or argument - one that includes subtle errors or misleading assertions, e.g. inaccurate historical details, misunderstood motifs, or cultural oversights. Ask me to identify the mistakes or distortions. If I correctly pinpoint them, congratulate me and ask me to propose a more accurate interpretation. If I miss them, prompt me to reconsider with a clue. After two wrong attempts, you can point out the specific errors. Then ask me how to correct these errors. Finally, offer a new flawed critique for me to analyse."
+  },
+  {
+    "id": 40,
+    "heading": "Identifying omissions [Social sciences]",
+    "template": "I am a {{student}} student. I want to improve my knowledge of {{topic}}. Provide me with a short piece of analysis, e.g. an exploration of a societal issue, a policy proposal, or research finding. Omit several key steps or pieces of data, like important statistical basis, root causes, or theoretical frameworks. For each missing component, prompt me to supply what I think belongs there. If I give a correct or relevant response, confirm and move on. If it's off track, let me know where I might reconsider, but don't give the exact answer yet. After we fill in the missing steps, restart the exercise with a new context related to the original topic."
+  },
+  {
+    "id": 41,
+    "heading": "Deeper interpretations [Social sciences]",
+    "template": "I am a {{student}} student. I want to engage more deeply with the complexities of {{topic}}. Pose an open-ended question on the societal issues, economic factors, or historical context that might explain this phenomenon. Let me propose an answer. If I'm missing key considerations, prompt me with a perspective that challenge my viewpoint. Only after I've had two tries should you clarify any important details I've overlooked. Move on to a fresh open-ended question each time I resolve one."
+  },
+  {
+    "id": 42,
+    "heading": "Evalating viewpoints [Social sciences]",
+    "template": "I am a {{student}} student. I want to learn to evaluate different viewpoints related to {{topic}}. Provide four short research conclusions, policy proposals, or social arguments about the topic, each emphasising different perspectives or solutions. One should be well-supported by evidence and methodology, the other three should contain hidden flaws or insufficient support. Ask me to rank them from weakest to strongest, explaining my reasoning. If I struggle, guide me to revisit by hinting at what contexts or factors I might have missed. Only after two unsuccessful attempts should you indicate which is truly strongest and why. Then present another set of proposals or arguments."
+  },
+  {
+    "id": 43,
+    "heading": "Identifying root causes [Social sciences]",
+    "template": "I am a {{student}} student. I want to practice formulating hypotheses related to {{topic}}. Offer me an outline of some hypothetical physical or social data, e.g. demographics, statistics, or case studies. Ask me to propose a hypothesis to explain the root causes, core issues, or different perspectives. If my hypothesis seems reasonable, challenge me further on what could practically be done to verify the conclusions. If my hypothesis is weak, point out areas for improvement but let me try a second time. Once I settle on a coherent hypothesis, start again with a new scenario to analyse."
+  },
+  {
+    "id": 44,
+    "heading": "Research proposals [Social sciences]",
+    "template": "I am a {{student}} student. I want to strengthen my research skills in {{topic}}. Give me a scenario that involves a social issue, policy question, or theoretical debate. Ask me to outline a research study or policy proposal to address it. Once I've responded, first highlight the most promising aspects of my plan, then critique my approach, particularly if I overlook key aspects like sampling, measurement, or theoretical context. Give me a chance to refine my proposal. If I'm still missing crucial points after two attempts, outline how you'd refine the study. Then move on to a new scenario."
+  },
+  {
+    "id": 45,
+    "heading": "Flawed interpretation analysis [Social science]",
+    "template": "I am a {{student}} student. I want to improve my critical thinking in {{topic}}. Present a short, flawed argument about a social phenomenon, policy idea, or hypothetical claim. Embed subtle inaccuracies, e.g. misuse of data, omission of important social factors, or oversimplification of complex debates. Ask me to identify the issues, propose counterarguments that need consideration, and/or raise perspectives that challenge the viewpoint. If I find the flaws, congratulate me and ask how I'd correct them. If I miss them, give me a hint. Only after two attempts should you point out the errors, then have me articulate the correction. Offer a new flawed argument afterward."
+  },
+  {
+    "id": 46,
+    "heading": "Vocabulary questions [Languages]",
+    "template": "I am a {{student}} student. I want to improve my everyday vocabulary for the topic of {{topic}}. Please ask me multiple-choice questions where each question contains a simple phrase or single word in the target language. Provide 5 options labelled A to E. Make sure the wrong options look plausible. Each time I answer, let me know if I'm correct. If I'm wrong, give me one more try before telling me the correct answer. Continue asking me new questions after each correct response."
+  },
+  {
+    "id": 47,
+    "heading": "Grammar gap-fill [Languages]",
+    "template": "I am a {{student}} student. I want to practise grammar and vocabulary in {{topic}}. Please give me a short text of at least 150 words in the target language with 10 gaps to fill in. Number each gap. Then provide a list of 15 words in the target language, 10 of which fit the gaps, and 5 that are red herrings. When I guess each gap, congratulate me if I am correct. If I am incorrect, offer a small hint. Do not reveal the right answer unless I fail three times for the same gap."
+  },
+  {
+    "id": 48,
+    "heading": "Conversation practice [Languages]",
+    "template": "I am a {{student}} student. I would like to practise everyday conversation in {{topic}}. Please write a short dialogue in the target language. However, leave every other line blank for me to complete. After I fill in a blank line, let me know if my sentence makes sense. If it doesn't, prompt me to reconsider. Once I succeed, reveal the next part of the dialogue. Continue until the conversation is complete."
+  },
+  {
+    "id": 49,
+    "heading": "Guessing game [Languages]",
+    "template": "I am a {{student}} student. I'd like to play a game to improve my vocabulary in {{topic}}. Please pick an object, person, or simple concept related to everyday life, but do not tell me what it is. I will ask yes/no questions in the target language. After each question, answer yes or no (or clarify if needed). If I guess the word correctly, congratulate me and immediately pick another one. If I'm off track, let me keep guessing until I arrive at the answer. Continue with new items to help expand my vocabulary."
+  },
+  {
+    "id": 50,
+    "heading": "Odd-one-out game [Languages]",
+    "template": "I am a {{student}} student. I want to play an 'odd one out' game to strengthen my vocabulary in {{topic}}. Each round, give me 5 words in the target language. Four of them share a common link; one is the odd one out. Ask me which is the odd one out. If I get it wrong, give me a clue and let me try again. If I guess right, congratulate me, then ask me what the link is between the remaining four words. After I answer, start a new round."
+  },
+  {
+    "id": 51,
+    "heading": "Reading comprehension [Languages]",
+    "template": "I am a {{student}} student. I want to practise my reading comprehension in the target language for {{topic}}. Give me a short paragraph of around 100 words with 5 mistakes: these could be incorrect words, spelling errors, or mismatched grammar. Ask me to identify one mistake at a time. If I find a mistake and correct it properly, congratulate me and invite me to look for the next. If I cannot spot a mistake, offer a small hint. Only reveal the correction if I fail to spot it after two tries. Continue until I find all 5 mistakes, then provide a new paragraph."
+  },
+  {
+    "id": 52,
+    "heading": "Definition critique [Languages]",
+    "template": "I am a {{student}} student. I want to learn the meanings of common words or short phrases in {{topic}}. Please present me with a single word or phrase in the target language. Then give me two definitions, again in the target language: one should be correct and the other slightly inaccurate. Ask me to pick which definition is correct and explain why I chose it. If I pick incorrectly, let me try again. After I succeed, move on to a new word or phrase"
+  },
+  {
+    "id": 53,
+    "heading": "Sentence building [Languages]",
+    "template": "I am a {{student}} student. I want to strengthen my sentence-building skills based around the topic of {{topic}}. Present me with 5 sentences in the target language, each describing a basic situation related to the topic. Scramble the word order in each sentence. Ask me to reorder the words correctly. If I place words incorrectly, let me try again. Confirm once I produce the correct sentence, then move to the next one."
+  },
+  {
+    "id": 54,
+    "heading": "Narative practice [Languages]",
+    "template": "I am a {{student}} student. I want to practise forming and understanding narratives on the theme of {{topic}}. Please invent a scenario in the style of a 'make your own adventure' story and write a short paragraph describing the setting in the target language. Then, ask me to state what happens next, again in the target language. Based on my choice, give me the next paragraph of the story. If my choice doesn't make sense grammatically, help me correct it. Continue until we reach the end of the adventure."
+  },
+  {
+    "id": 55,
+    "heading": "Challenging vocabulary [Languages]",
+    "template": "I am a {{student}} student. I want to improve my reading comprehension on the topic of {{topic}}. Write three short sentences in the target language about the topic, of which two should be truths and one a lie. Ask me to identify which statement is the lie. If I choose incorrectly, prompt me to read carefully and look for details. Once I identify the correct lie, challenge me (in English) to explain the meaning of any tricky vocabulary. After this, present me with a new set of three sentences."
+  },
+  {
+    "id": 56,
+    "heading": "Responses in context [Languages]",
+    "template": "I am a {{student}} student. I want to improve my ability to respond to context-based questions on the topic of {{topic}}. Provide a short paragraph in the target language describing an everyday scene. Then ask me 5 open-ended questions about it, again in the target language, such as 'why did the person need to do X?', 'what happened after Y?', or 'what was unusual about Z?'. After each answer, if I'm correct, confirm. If I'm missing details, ask me to look back at the text (using simple target language instructions). Only reveal the exact detail if I'm still unsure after a second attempt, the proceed onto a new paragraph."
+  },
+  {
+    "id": 57,
+    "heading": "Riddles [Languages]",
+    "template": "I am a {{student}} student. I want to expand my vocabulary about {{topic}} through riddles. Please present me with riddles in the target language describing everyday items or situation. For example, 'you use me to listen to music' which has the answer 'headphones' - but in the target language! Do not include any emojis or other hints that make it obvious. Each riddle should be short and use basic vocabulary. Ask me to guess the answer. If I am wrong, give me a hint. Only reveal the answer if I fail twice. Then move on to the next riddle."
+  },
+  {
+    "id": 58,
+    "heading": "Explain it backwards [Novel]",
+    "template": "I am a {{student}} student. I want to deepen my understanding of {{topic}} by explaining it backwards. Provide me with a final conclusion, discovery, or outcome about the topic. Ask me to reverse-engineer the steps or logic that led to this conclusion - like telling a story from the end back to the beginning. Help me by breaking it down into small steps, using questions such as 'what happened to cause this', 'why did this happen', and 'what are the underlying causes/processes' to guide me. Give me a chance to respond after each question, don't ask me multiple questions at once. If I miss a crucial fact, prompt me with to correct or clarify them. Once I reconstruct the logic properly, present a new conclusion for me to invert again."
+  },
+  {
+    "id": 59,
+    "heading": "Mastery through storytelling [Novel]",
+    "template": "I am a {{student}} student, seeking a creative approach to mastering the topic of {{topic}} through storytelling. Start a short story or scenario involving the topic, e.g. a historical setting, a future invention, a moral dilemma. Leave it open-ended, then ask me to continue the story in my own words. After my response, challenge me, with hints, to identify what questions I should be asking, or if there are other possible conclusions. Keep the narrative going until we build a complete chain or events or natural conclusion. Afterward, prompt me to reflect on real-world parallels and underlying lessons."
+  },
+  {
+    "id": 60,
+    "heading": "Personify the topic [Novel]",
+    "template": "I am a {{student}} student, and I want to personify {{topic}} to understand it better. Pick two or three main ideas or concepts within the topic - personify them as characters in a conversation. Describe the scenario and ask me to continue the dialogue, letting each 'character' present its perspective. We should then take it in turns to contribute, but you should be careful to give concise responses each time so that I'm doing most of the thinking. If I give a simplistic or incorrect portrayal, point out possible contradictions or assumptions, before returning to character and sharing your dialogue snippet. Once the conversation finishes, invite me to reflect on what conclusions we can draw from this activity."
+  },
+  {
+    "id": 61,
+    "heading": "Flipped viewpoints [Novel]",
+    "template": "I am a {{student}} student, aiming to re-examine {{topic}} from novel angles. Provide me with a common viewpoint or approach to the topic, then ask me to flip it, by inviting me to suggest how someone from a completely different context or discipline might see it. If my reframe is superficial, guide me to think deeper by highlighting what might cause the biggest effect if it were reversed, before giving me another go. If I respond with a plausible reframing and sensible implications, encourage me to identify the assumptions baked into the original viewpoint that explain why it is the commonly held perspective. After I produce a thorough reinterpretation, offer another angle to explore."
+  },
+  {
+    "id": 62,
+    "heading": "Extreme scenarios [Novel]",
+    "template": "I am a {{student}} student. I want to stretch my thinking about {{topic}} with extreme or hypothetical cases. Pose an extreme scenario or boundary condition, e.g. what if we took away X and replaced it with Y (replacing X and Y with relevent resources), what if resources were unlimited, or what if the time scales were significantly different. Then, invite me to predict the outcomes or process alterations under such extreme conditions. If I jump to a simplistic conclusion, help me be out by suggesting which aspects are most important before giving me another go. Once I establish a workable theory, suggest another extreme to explore."
+  },
+  {
+    "id": 63,
+    "heading": "Put the topic on trial [Novel]",
+    "template": "I am a {{student}} student. Let's put {{topic}} on trial! Imagine the topic is the defendant in a courtroom. Assign me the roles of prosecutor, and invite me to argue why the topic might be flawed, harmful, or incomplete. If my argument is shallow or flawed, politely ask me to refine it with an indication of what I might have missed or done wrong. Then, it will be your turn as the defender, highlighting the topic's benefits and validity. Prompt me to respond to cross-examine your statement, just as you did mine. Continue this exchange for three rounds, or until one of us has run out of arguments. Afterwards, invite me to act as the judge, weighing up both sides, and delivering a verdict."
+  }
+]

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-print-json@3.0/dist/css/pretty-print-json.css">
+    <meta name="current-user-email" content="<%= user.Email %>">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="float-right">                      
+            <a href="/" class="btn btn-neutral btn-mini">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+        </div>
+        
+        <details>
+            <summary>
+                <h1 class="page-heading">Users</h1>
+            </summary>
+            
+            <div class="row">
+                <div class="col-4">
+                    <a href="/admin/users/new" class="btn btn-primary">
+                        <span class="material-symbols-outlined">person_add</span>&nbsp;&nbsp;Add User(s)
+                    </a>  
+                </div>                
+                <div class="col-8"></div>             
+            </div>
+            
+            <div id="users-loader" class="loader-container">
+                <div class="loader"></div>
+            </div>
+            <div id="users-table-container" class="hidden">
+            <table class="admin-table">
+                <thead>
+                    <tr>                    
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th class="thin-column">Saved Recipes</th> 
+                        <th class="thin-column" style="font-size: small; text-align: center;">Views<br/><span style="font-weight:normal;">(APIs)</span></th> 
+                        <th class="thin-column">Admin</th> 
+                        <th colspan="3" class="thin-column">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="users-body"></tbody>
+            </table>
+            </div>
+        </details>
+       
+        <details style="padding-top:40px; width: 100%;">
+            <summary>
+                <h1 class="page-heading" style="display: inline-block;">Subjects</h1>                
+            </summary>
+          
+            <div class="row">                
+                <div class="col-4">
+                    <a href="/admin/subjects/new" class="btn btn-primary">
+                        <span class="material-symbols-outlined">add_notes</span>&nbsp;&nbsp;Add Subject
+                    </a>
+                </div>       
+                <div class="col-8"></div>
+            </div>
+
+            <div id="subjects-loader" class="loader-container">
+                <div class="loader"></div>
+            </div>
+            <div id="subjects-table-container" class="hidden">
+            <table class="admin-table">
+                <thead>
+                    <tr>                    
+                        <th style="width: 10%;">Id</th>                                        
+                        <th style="width: 10%;">Level</th>
+                        <th style="width: 20%;">Subject</th>
+                        <th style="width: 20%;">ExamBoard</th>
+                        <th style="width: 20%;">Category</th>
+                        <th colspan="4" style="width: 20%;">Actions</th>
+                    </tr>
+                </thead> 
+                <tbody id="subjects-body"></tbody>
+            </table>
+            </div>
+        </details>
+
+        <details style="padding-top:40px; width: 100%;">
+            <summary>
+                <h1 class="page-heading">Logs</h1>
+            </summary>
+        
+            <h3>(most recent 100)</h3>
+
+            <div id="logs-loader" class="loader-container">
+                <div class="loader"></div>
+            </div>
+            <div id="logs-table-container" class="hidden">
+            <table class="admin-table">
+                <thead>
+                    <tr>                    
+                        <th style="width: 25%;">UserEmail</th>                    
+                        <th style="width: 25%;">PathAccessed</th>
+                        <th style="width: 25%;">Timestamp</th>
+                        <th style="width: 25%;">Error</th>
+                    </tr>
+                </thead>
+                <tbody id="logs-body"></tbody>
+            </table>
+            </div>
+            
+        </details>
+
+        <details style="padding-top:40px; width: 100%;">
+            <summary>
+                <h1 class="page-heading">Database</h1>
+            </summary>
+        
+            <div class="row">                
+                <div class="col-4">
+                    <button class="btn btn-subtle" id="exportEvents">
+                        <span class="material-symbols-outlined">download</span>&nbsp;&nbsp;Download anonymised recipes
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-subtle" id="downloadDatabase">
+                        <span class="material-symbols-outlined">download</span>&nbsp;&nbsp;Download <b>&nbsp;whole database&nbsp;</b> backup
+                    </button>
+                </div>            
+                <div class="col-4"></div>     
+            </div>
+            
+
+        </details>  
+    
+    </div>
+
+    <script src="/pretty-print-json.min.js"></script>
+    <script src="/toast.js"></script>
+    <script src="/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<% const MAX_PROMPTS_ON_DISPLAY = 10; %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />        
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1 style="text-align: left;">Recipes for <%= user.FirstName %> <%= user.LastName %> <span style="font-weight: normal;">(<%= user.Email %>)</span></h1>
+        <div class="float-right">            
+            <a href="/admin"  class="btn btn-neutral btn-mini">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+        </div>
+    
+        <table class="recipe-table">
+            <thead>
+                <tr>
+                    <th class="thin-column">Date</th>
+                    <th>Subject</th>
+                    <th class="medium-column">Topic</th>
+                    <th colspan="2" class="wide-column">Prompt</th>
+                    <th class="thin-column">Shared</th> 
+                </tr>   
+            </thead>
+            <tbody>                
+                <% recipes.forEach(function(r) { 
+                    const savedDateObj = new Date(r.SavedDate);
+                    const formattedDate = savedDateObj.toLocaleString('en-GB', { 
+                      day: '2-digit', 
+                      month: '2-digit', 
+                      year: 'numeric', 
+                      hour: '2-digit', 
+                      minute: '2-digit', 
+                      hour12: false 
+                    });
+                %>
+                    <tr>                                              
+                        <td style="font-size: small"><%= formattedDate %></td>
+                        <td style="font-size: small"><%= r.Level %><br/><%= r.Subject %></td>
+                        <td style="font-size: small"><%= r.Topic %></td>
+                        <td class="no-right-border" id="prompt-<%= r.RecipeId %>"><%= r.Prompt %></td>
+                        <td class="thin-column no-left-border">                        
+                            <button id="copy-button-<%= r.RecipeId %>" class="btn btn-primary btn-mini copy-button">
+                                <span class="material-symbols-outlined">content_copy</span>
+                            </button>
+                        </td>    
+                        <td class="thin-column">
+                            <% if (r.SharedDate == null) { %>
+                                <span class="badge badge-no">No</span>
+                            <% } else { %>
+                                <span class="badge badge-yes">Yes</span>
+                            <% } %>
+                        </td>
+                                                                    
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+    
+    </div>
+
+    <script src="/toast.js"></script>
+    <script src="/recipes.js"></script>
+
+</body>
+</html> 

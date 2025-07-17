@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="siteTitle">
+            <%- siteTitle %>
+        </h1>
+        <h2>Please login</h2>
+        <% if (error && error.length > 0) { %>
+            <% error.forEach(function(msg) { %>
+                <p class="error-message"><%= msg %></p>
+            <% }); %>
+        <% } %>
+        <form id="loginForm" action="/login" method="POST">
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+        <div class="logo">
+            <img height="57px" style="height: 57px;" src="<%- institutionLogo %>">
+        </div>
+    </div>
+
+    <script src="/login.js"></script>
+</body>
+</html>
