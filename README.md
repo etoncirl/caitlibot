@@ -7,7 +7,7 @@ CAITLibot is a tool for generating bespoke, student-led, AI-powered learning act
 Please see these three documents:
 - [Instructions for installation](Instructions%20for%20CAITLibot%20installation.pdf)
 - [Instructions for configuration and customisation](Instructions%20for%20CAITLibot%20configuration%20and%20customisation.pdf)
-- [Teachers' guide](CAITLibot%20Teachers%27%20guide.pdf)
+- [Teachers' guide](CAITLibot%20teachers'%20guide.pdf)
 
 ## Version
 
